@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,li{
+    list-style: none;
+}
+img{
+    vertical-align: middle;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.grid{
+    display: grid;
+    margin: 0 15px;
+    grid-gap: 24px;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.w-25{
+    width: 25%;
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+/* All common css end */
+
+/* =======================================
+            Navbar part start
+======================================= */
+header{
+    background: #FFB200;
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone h5{
+    color: #fff;
+    font-size: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 25px auto;
+    align-items: center;
+}
+.phone h5 a{
+    color: rgb(34, 34, 34);
+}
+.social_link{
+    text-align: right;
+}
+.social_link a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #277bc000;
+    color: #fff;
+    padding-top: 3px;
+    text-align: center;
+}
+.social_link a:first-child{
+    margin-left: 0;
+}
+
+/* =======================================
+            Navbar part end
+======================================= */
+
+
+
+/* =======================================
+            navbar part start
+======================================= */
+#navbar{
+    background: #2C3333;
+}
+.main_menu{
+    grid-template-columns: 80px auto 193px;
+    grid-template-rows: 80px;
+    align-items: center;
+    
+}
+.menu{
+    text-align: center;
+}
+.menu ul{
+    display: inline-grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+}
+
+.menu ul li a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+.btns a{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #FFB200;
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+/* Mobile menu start */
+.bars {
+	width: 40px;
+	height: 30px;
+	cursor: pointer;
+	display: grid;
+	align-items: center;
+    display: none;
+}
+.bars span{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+}
+.bars span::before{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+}
+.bars span::after{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.mobile_overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    background: #2c333385;
+    transition: all ease .3s;
+    z-index: 50;
+}
+.mobile_overlay.show{
+    width: 100vw;
+}
+.side_menu{
+    width: 50vw;
+    height: 100vh;
+    padding: 10px 20px;
+    position: fixed;
+    left: 0;
+    left: -101%;
+    z-index: 100;
+    background: #51557E;
+    transition: all ease .3s;
+}
+.side_menu.show{
+    left: 0;
+}
+
+.mobile_menu_header{
+    padding: 20px 0;
+    position: relative;
+}
+.mobile_menu_header .close{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 3px 5px;
+    background: #464c8e;
+    color: #FFB200;
+    cursor: pointer;
+    transition: all linear .2s;
+}
+.mobile_menu_header .close:hover{
+    color: red;
+}
+.mobile_menu_header .logo{
+    width: 60px;
+}
+.mobile_menu ul li{
+    border-bottom: 1px solid #000;
+}
+.mobile_menu ul li:last-child{
+    border-bottom: none;
+}
+.mobile_menu ul li a{
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+.side_menu .btns{
+    text-align: center;
+}
+.side_menu .btns a{
+    margin: 0 20px;
+}
+/* Mobile menu end */
+
+/* =======================================
+            navbar part end
+======================================= */
+
+
+
+/* =======================================
+            banner part start
+======================================= */
+#banner{
+    padding: 70px 0;
+}
+.banner_container{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px auto;
+    grid-template-areas: 
+        'l r'
+        'b b'
+    ;
+}
+.banner_container .left_side{
+    background: red;
+    grid-area: l;
+}
+.banner_container .right_side {
+	background: gray;
+	grid-area: r;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas:
+    'i_1 i_1 i_2'
+    'i_3 i_5 i_2'
+    'i_3 i_4 i_4';
+}
+.banner_container .right_side .item{
+    background: blue;
+}
+.banner_container .right_side .item img{
+    object-fit: cover;
+    height: 100%;
+    /* overflow: hidden; */
+}
+.banner_container .right_side .item_1{
+    grid-area: i_1;
+    background: url(../images/banner_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_container .right_side .item_2{
+    grid-area: i_2;
+    background: url(../images/banner_2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_container .right_side .item_3{
+    grid-area: i_3;
+    background: url(../images/banner_3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_container .right_side .item_4{
+    grid-area: i_4;
+    background: url(../images/banner_4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_container .right_side .item_5{
+    grid-area: i_5;
+    background: url(../images/banner_5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_container .bottom_side {
+	background: purple;
+	grid-area: b;
+	padding: 20px 0;
+}
+.service{
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.service .item{
+    padding: 10px 15px;
+    background: #54BAB9;
+}
+.service .item .image{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: grid;
+    align-items: center;
+}
+
+
+/* =======================================
+            banner part end
+======================================= */
+
+
+
+/* =======================================
+            Navbar part start
+======================================= */
+/* =======================================
+            Navbar part end
+======================================= */
+
+
