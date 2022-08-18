@@ -26,4 +26,32 @@
         margin: 0 5px;
         padding: 10px 20px;
     }
+    /* Banner part start */
+    .banner_container {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            'l l'
+            'r r'
+            'b b';
+    }
+    .banner_container .left_side {
+        padding: 50px 15px;
+    }
+    .banner_container .left_side h1 {
+        font-size: 30px;
+    }
+    .banner_container .right_side {
+        grid-template-rows: repeat(3, 90px);
+    }
+    /* Banner part End */
+    /* Service part start */
+    .service {
+        gap: 20px;
+        grid-template-rows: 50px auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Service part end */
 }

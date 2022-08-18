@@ -3,6 +3,7 @@
     margin: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 a{
     text-decoration: none;
@@ -101,7 +102,7 @@ header{
     background: #2C3333;
 }
 .main_menu{
-    grid-template-columns: 80px auto 193px;
+    grid-template-columns: 80px auto 264px;
     grid-template-rows: 80px;
     align-items: center;
     
@@ -244,6 +245,7 @@ header{
 ======================================= */
 #banner{
     padding: 70px 0;
+    background: #eee;
 }
 .banner_container{
     margin: 0;
@@ -256,11 +258,24 @@ header{
     ;
 }
 .banner_container .left_side {
-    background: #5c5c5c;
     grid-area: l;
+    padding: 100px 50px;
+}
+.banner_container .left_side h1{
+color: #313131;
+font-size: 45px;
+text-transform: capitalize;
+}
+.banner_container .left_side p{
+color: #444;
+font-size: 16px;
+line-height: 1.5;
+text-transform: capitalize;
+padding: 30px 100px 0 0;
 }
 .banner_container .right_side {
-	background: gray;
+    overflow: hidden;
+    border-radius: 10px;
 	grid-area: r;
 	display: grid;
 	grid-gap: 5px;
@@ -274,11 +289,7 @@ header{
 .banner_container .right_side .item{
     background: blue;
 }
-.banner_container .right_side .item img{
-    object-fit: cover;
-    height: 100%;
-    /* overflow: hidden; */
-}
+
 .banner_container .right_side .item_1{
     grid-area: i_1;
     background: url(../images/banner_1.jpg);
@@ -302,6 +313,7 @@ header{
 }
 .banner_container .right_side .item_4{
     grid-area: i_4;
+    overflow: hidden;
     background: url(../images/banner_4.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -315,18 +327,32 @@ header{
     background-size: cover;
 }
 .banner_container .bottom_side {
-    background: #343434;
+    background: #eee;
     grid-area: b;
     padding: 20px 0;
 }
 .service{
     display: grid;
     grid-gap: 12px;
+    grid-template-rows: 50px auto;
     grid-template-columns: repeat(4, 1fr);
+}
+.service .service_heading{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+.service .service_heading h3{
+    color: #FFB200;
+    font-size: 30px;
+    text-transform: uppercase;
+
 }
 .service .item{
     padding: 10px 15px;
-    background: #54BAB9;
+    background: #fff;
 }
 .service .item .image{
     width: 100px;
