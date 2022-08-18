@@ -255,8 +255,8 @@ header{
         'b b'
     ;
 }
-.banner_container .left_side{
-    background: red;
+.banner_container .left_side {
+    background: #5c5c5c;
     grid-area: l;
 }
 .banner_container .right_side {
@@ -315,9 +315,9 @@ header{
     background-size: cover;
 }
 .banner_container .bottom_side {
-	background: purple;
-	grid-area: b;
-	padding: 20px 0;
+    background: #343434;
+    grid-area: b;
+    padding: 20px 0;
 }
 .service{
     display: grid;
