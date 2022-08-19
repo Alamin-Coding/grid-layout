@@ -23,3 +23,25 @@ close.addEventListener("click", () => {
         this.classList.remove("show")
     }
   });
+
+  // Auto layout gallery popup
+  let popup = document.querySelector(".popup")
+  let popup_close = document.querySelector(".popup_close")
+  let images = document.querySelectorAll(".auto-layout .item")
+  const body = document.querySelector("body")
+  
+  images.forEach(image => {
+    image.addEventListener("click", (e) => {
+      popup.classList.add("show")
+      let popup_img = document.querySelector(".popup_img")
+      let src = e.target.getAttribute("src")
+      popup_img.setAttribute("src", src)
+      body.classList.add("overlay")
+    })
+  });
+
+  popup_close.addEventListener("click", () => {
+    popup.classList.remove("show")
+    body.classList.remove("overlay")
+  })
+
