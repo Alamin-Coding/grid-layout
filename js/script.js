@@ -40,6 +40,13 @@ close.addEventListener("click", () => {
     })
   });
 
+  body.addEventListener("click",(e) => {
+    if(e.target.classList[0] == "overlay"){
+      popup.classList.remove("show")
+      body.classList.remove("overlay")
+    }
+  })
+
   popup_close.addEventListener("click", () => {
     popup.classList.remove("show")
     body.classList.remove("overlay")
